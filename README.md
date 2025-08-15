@@ -2,6 +2,8 @@
 
 A React frontend for a fitness center website that displays classes and trainers. Built for HTTP5222 Assignment 2.
 
+**Live Demo:** [https://fitness-center-frontend.vercel.app/](https://fitness-center-frontend.vercel.app/)
+
 ## Features
 
 - Home page with hero section and features
@@ -71,6 +73,8 @@ To deploy to Vercel:
 1. Install Vercel CLI: `npm install -g vercel`
 2. Build the project: `npm run build`
 3. Deploy: `vercel`
+
+**Live Demo:** [https://fitness-center-frontend.vercel.app/](https://fitness-center-frontend.vercel.app/)
 
 ## Assignment Requirements
 
