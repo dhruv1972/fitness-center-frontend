@@ -74,7 +74,6 @@ To deploy to Vercel:
 
 ## Assignment Requirements
 
-This project meets all HTTP5222 Assignment 2 requirements:
 - Built with React
 - Connects to backend API (Express)
 - Professional design and styling
@@ -89,6 +88,4 @@ This project meets all HTTP5222 Assignment 2 requirements:
 - Responsive design works on mobile and desktop
 - Error handling included for API failures
 
-## Contact
 
-For questions about this project, contact the developer.
