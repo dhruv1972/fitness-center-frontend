@@ -1,0 +1,238 @@
+.classes-page {
+    padding: 80px 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.classes-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.class-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid #f1f3f4;
+    position: relative;
+}
+
+.class-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.class-header {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.class-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.class-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 2;
+}
+
+.class-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.schedule-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.schedule-time {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.class-content {
+    padding: 2rem;
+}
+
+.class-description {
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.trainer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border-left: 4px solid #007bff;
+}
+
+.trainer-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.trainer-name {
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.class-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+}
+
+.capacity {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.capacity-label {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.capacity-value {
+    color: #28a745;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.class-actions {
+    padding: 0 2rem 2rem;
+}
+
+.class-actions .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.class-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Loading and error states */
+.loading,
+.error,
+.no-classes {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+    color: #6c757d;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.error {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.no-classes {
+    background: #e2e3e5;
+    color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .classes-page {
+        padding: 60px 0;
+    }
+
+    .classes-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .class-card {
+        margin: 0;
+    }
+
+    .class-header {
+        padding: 1.5rem;
+    }
+
+    .class-content {
+        padding: 1.5rem;
+    }
+
+    .class-actions {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .class-name {
+        font-size: 1.4rem;
+    }
+
+    .schedule-time {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .classes-grid {
+        padding: 0 0.5rem;
+    }
+
+    .class-header {
+        padding: 1.25rem;
+    }
+
+    .class-content {
+        padding: 1.25rem;
+    }
+
+    .class-actions {
+        padding: 0 1.25rem 1.25rem;
+    }
+}

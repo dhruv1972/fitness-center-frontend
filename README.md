@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# FitLife Fitness Center - React Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React frontend for a fitness center website that displays classes and trainers. Built for HTTP5222 Assignment 2.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Home page with hero section and features
+- Classes page showing available fitness classes
+- Trainers page with trainer profiles and specialties
+- Contact page with contact form
+- Responsive design for mobile and desktop
+- Connects to Express backend API (optional)
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Home**: Welcome page with call-to-action buttons
+2. **Classes**: Shows all fitness classes with schedules and trainers
+3. **Trainers**: Displays trainer profiles with specialties and contact info
+4. **Contact**: Contact form and fitness center information
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Used
 
-### `npm test`
+- React 19.1.1
+- React Router for navigation
+- Axios for API calls
+- CSS for styling
+- Express backend (optional)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+1. Make sure you have Node.js installed
+2. Clone or download the project
+3. Open terminal in the project folder
+4. Run `npm install` to install dependencies
+5. Run `npm start` to start the development server
+6. Open http://localhost:3000 in your browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Setup (Optional)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you want to use live data from a backend:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Start your Express backend server on port 3000
+2. Make sure your backend has these API endpoints:
+   - GET /api/classes
+   - GET /api/trainers
+3. The React app will automatically use live data
 
-### `npm run eject`
+If the backend is not available, the app will use sample data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/
+│   ├── Navbar.js          # Navigation bar
+│   ├── Home.js            # Home page
+│   ├── Classes.js         # Classes page
+│   ├── Trainers.js        # Trainers page
+│   ├── Contact.js         # Contact page
+│   ├── Footer.js          # Footer
+│   └── *.css              # Styles for each component
+├── App.js                 # Main app component
+├── App.css               # Global styles
+└── index.js              # Entry point
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To deploy to Vercel:
 
-## Learn More
+1. Install Vercel CLI: `npm install -g vercel`
+2. Build the project: `npm run build`
+3. Deploy: `vercel`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Assignment Requirements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project meets all HTTP5222 Assignment 2 requirements:
+- Built with React
+- Connects to backend API (Express)
+- Professional design and styling
+- Data from two collections (Classes & Trainers)
+- CORS configured
+- Ready for deployment
 
-### Code Splitting
+## Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The app works with sample data if no backend is available
+- All styling is done with CSS
+- Responsive design works on mobile and desktop
+- Error handling included for API failures
 
-### Analyzing the Bundle Size
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For questions about this project, contact the developer.

@@ -1,0 +1,374 @@
+.trainers-page {
+    padding: 80px 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.trainers-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.trainers-header .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.trainers-header .page-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.trainer-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 1px solid #f1f3f4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-avatar {
+    padding: 2.5rem 1rem 1.5rem;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.trainer-avatar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.avatar-placeholder {
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.trainer-card:hover .avatar-placeholder {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.trainer-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+}
+
+.experience {
+    background: rgba(255, 255, 255, 0.9);
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.trainer-info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.trainer-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.trainer-certification {
+    margin-bottom: 1rem;
+}
+
+.cert-badge {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.trainer-bio {
+    color: #6c757d;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    text-align: left;
+    flex: 1;
+}
+
+.trainer-specialties {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.trainer-specialties h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.specialties-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.specialty-tag {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    color: #495057;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.specialty-tag:hover {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.trainer-contact {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    border-left: 4px solid #007bff;
+    text-align: left;
+}
+
+.trainer-contact h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.trainer-contact p {
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.trainer-actions {
+    padding: 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-shrink: 0;
+}
+
+.trainer-actions .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.trainer-actions .btn-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+}
+
+.trainer-actions .btn-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+}
+
+.trainer-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.trainer-actions .btn-secondary:hover {
+    box-shadow: 0 8px 20px rgba(108, 117, 125, 0.3);
+}
+
+/* Loading and error states */
+.loading,
+.error,
+.no-trainers {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+    color: #6c757d;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.no-trainers {
+    background: #e2e3e5;
+    color: #6c757d;
+}
+
+.no-trainers h3 {
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trainers-page {
+        padding: 60px 0;
+    }
+
+    .trainers-header .page-title {
+        font-size: 2rem;
+    }
+
+    .trainers-header .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .trainers-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .trainer-card {
+        margin: 0;
+    }
+
+    .trainer-info {
+        padding: 1.5rem;
+    }
+
+    .trainer-actions {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 3.5rem;
+    }
+
+    .trainer-name {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trainers-grid {
+        padding: 0 0.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .trainer-info {
+        padding: 1.25rem;
+    }
+
+    .trainer-actions {
+        padding: 0 1.25rem 1.25rem;
+    }
+
+    .avatar-placeholder {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .specialty-tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .trainers-header .page-title {
+        font-size: 1.8rem;
+    }
+}
